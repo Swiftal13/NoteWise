@@ -13,3 +13,6 @@ It only predicts if the text was typed. If there is a part which AI genereated, 
 add widgets to create as new objects for each new note
 Colour scheme modern pallete. **Might change to vibrant blue**
 add highlighting mechanism
+
+
+update, i switched to customtkinter module
