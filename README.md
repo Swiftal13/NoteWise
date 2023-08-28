@@ -17,3 +17,4 @@ add highlighting mechanism
 
 update, i switched to customtkinter module
 i noticed to use the master root for the tkinter frame, i must assign the parent class of the tab object as self.frame so it exists for the object
+I want to create the tabs functionality,and deletion. Then we focus on NLP processing and generation
