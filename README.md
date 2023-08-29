@@ -21,3 +21,7 @@ I want to create the tabs functionality,and deletion. Then we focus on NLP proce
 
 errror with inheritance and nested loops. fixed
 going to follow apple cualtor color scheme
+
+
+
+![image](https://github.com/Swiftal13/NoteWise/assets/76588047/8c3d0fd6-51ed-46e7-8633-e0a8d074e1b1)
