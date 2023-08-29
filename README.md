@@ -29,3 +29,4 @@ going to follow apple cualtor color scheme
 
 next thing fix button space under the + button
 thencolor  hoverof tabs. i then have to create fetch and load mechanism for tabs and typbg
+i could document this as practice for NEA
