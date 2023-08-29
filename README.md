@@ -25,3 +25,6 @@ going to follow apple cualtor color scheme
 
 
 ![image](https://github.com/Swiftal13/NoteWise/assets/76588047/8c3d0fd6-51ed-46e7-8633-e0a8d074e1b1)
+
+
+next thing fix button space under the + button
