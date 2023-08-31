@@ -32,3 +32,10 @@ thencolor  hoverof tabs. i then have to create fetch and load mechanism for tabs
 i could document this as practice for NEA
 i have to ensure this is concise aefficnet code. No unneccesary
 web app? 
+
+
+![image](https://github.com/Swiftal13/NoteWise/assets/76588047/93adaa98-fe5b-45cb-9d90-c45069009ce3)
+I can create tabs and scroll.
+
+Delete tabs - only deletes one tab and thats it??? 
+after this ill work on the NLP process
