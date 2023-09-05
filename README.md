@@ -39,3 +39,6 @@ I can create tabs and scroll.
 
 Delete tabs - only deletes one tab and thats it??? 
 after this ill work on the NLP process
+
+![image](https://github.com/Swiftal13/NoteWise/assets/76588047/c250128c-f582-4951-9b5d-2328192754ce)
+night before y12 starts. I must get experience of NLP ML for NEA
