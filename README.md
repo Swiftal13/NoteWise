@@ -38,6 +38,11 @@ web app?
 I can create tabs and scroll.
 
 Delete tabs - only deletes one tab and thats it??? 
+
+
+![image](https://github.com/Swiftal13/NoteWise/assets/76588047/b2e751ca-4bed-41e7-92f9-46c27b0053fa)
+numbered tabs
+
 after this ill work on the NLP process
 
 ![image](https://github.com/Swiftal13/NoteWise/assets/76588047/c250128c-f582-4951-9b5d-2328192754ce)
