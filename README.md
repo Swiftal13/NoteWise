@@ -48,3 +48,5 @@ night before y12 starts. I must get experience of NLP ML for NEA
 
 ![image](https://github.com/Swiftal13/NoteWise/assets/76588047/67a2157b-e225-46d0-bce7-46c53c852959)
 info button window and numbered tabs
+
+next different tabs load diff text
