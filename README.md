@@ -46,6 +46,7 @@ after this ill work on the NLP process
 ![image](https://github.com/Swiftal13/NoteWise/assets/76588047/c250128c-f582-4951-9b5d-2328192754ce)
 night before y12 starts. I must get experience of NLP ML for NEA
 
+save functon, bug fixed where tab number goes negative
 ![image](https://github.com/Swiftal13/NoteWise/assets/76588047/67a2157b-e225-46d0-bce7-46c53c852959)
 info button window and numbered tabs
 
