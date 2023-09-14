@@ -59,3 +59,6 @@ next different tabs load diff text
             file.close()
 ```
 now saves text files 
+
+now can overwrite different text files depending onclick
+glitch, once i pressed number 2, it doesent change anymore it sticks to 2
