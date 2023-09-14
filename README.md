@@ -51,3 +51,11 @@ save functon, bug fixed where tab number goes negative
 info button window and numbered tabs
 
 next different tabs load diff text
+```py
+        def SaveText(text, tabName):
+            print(tabName)
+            file = open(f"{tabName}.txt", "x")
+            file.write(text)
+            file.close()
+```
+now saves text files 
