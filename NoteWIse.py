@@ -61,9 +61,14 @@ class NoteWise(ctk.CTk):
             self.AddTab = ctk.CTkButton(master = self.TabScroll, text = f"{name}", fg_color = darkGrey, command = lambda:SelectOverwrite(name), width=202, height = 40, corner_radius= 0, hover_color = grey, border_width = 0, border_color = "#1c1c1c")
             self.AddTab.pack(side = "top", pady = 0.2)
             Tabs.append(self.AddTab)
-            NewFile = (name, "x")
-            Files.append(NewFile)
+            try:
+                NewFile = open(f"{name}.txt", "x")
+                NewFile.close()
+                Files.append(NewFile)
+            except:
+                pass
             
+
 
 
         # TabDeletion function
