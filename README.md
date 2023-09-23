@@ -63,3 +63,5 @@ now can load files aswell, and save to both
 
 now can overwrite different text files depending onclick
 glitch, once i pressed number 2, it doesent change anymore it sticks to 2
+
+testing NLP on seperate file for now
