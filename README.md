@@ -65,3 +65,7 @@ now can overwrite different text files depending onclick
 glitch, once i pressed number 2, it doesent change anymore it sticks to 2
 
 testing NLP on seperate file for now
+
+CSV file assign variable value to varible in script
+refactor addtab fucntion 
+NLP learning, finish this by nomvemrber
