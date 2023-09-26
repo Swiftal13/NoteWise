@@ -69,3 +69,5 @@ testing NLP on seperate file for now
 CSV file assign variable value to varible in script
 refactor addtab fucntion 
 NLP learning, finish this by nomvemrber
+
+I made it so it takes counter value from csv. Now the overwrite varialbe always have a python file for some reaosn
