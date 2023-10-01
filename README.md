@@ -77,3 +77,5 @@ Now i need to change color of tab
 
 - deleting tabs does not work
 - changing colour of selected tab doesent work
+- deleting tabs doesent work
+- basically nothing works
