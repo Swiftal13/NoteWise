@@ -73,3 +73,4 @@ refactor addtab fucntion
 NLP learning, finish this by nomvemrber
 
 I made it so it takes counter value from csv. Now the overwrite varialbe always have a python file for some reaosn
+Now i need to change color of tab
