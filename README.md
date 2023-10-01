@@ -67,6 +67,8 @@ glitch, once i pressed number 2, it doesent change anymore it sticks to 2
 testing NLP on seperate file for now
 
 CSV file assign variable value to varible in script
+
+an important thing is handling errors in programs, using try and except. Chatgpt I used, and it produced code to handle no existtne file error. My unfixable error has been fixed 
 refactor addtab fucntion 
 NLP learning, finish this by nomvemrber
 
