@@ -75,7 +75,7 @@ NLP learning, finish this by nomvemrber
 I made it so it takes counter value from csv. Now the overwrite varialbe always have a python file for some reaosn
 Now i need to change color of tab
 
-I should create a class for tabs
+I should create a **class for tabs**
 an object tab instance can have date, text, name
 - deleting tabs does not work
 - changing colour of selected tab doesent work
