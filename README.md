@@ -75,7 +75,13 @@ NLP learning, finish this by nomvemrber
 I made it so it takes counter value from csv. Now the overwrite varialbe always have a python file for some reaosn
 Now i need to change color of tab
 
+I should create a class for tabs
+an object tab instance can have date, text, name
 - deleting tabs does not work
 - changing colour of selected tab doesent work
 - deleting tabs doesent work
 - basically nothing works
+
+- ![image](https://github.com/Swiftal13/NoteWise/assets/76588047/c03fe122-7c05-4b3b-9bc1-399307b134de)
+- handle more errors and exceptions
+
