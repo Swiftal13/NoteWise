@@ -85,3 +85,14 @@ an object tab instance can have date, text, name
 - ![image](https://github.com/Swiftal13/NoteWise/assets/76588047/c03fe122-7c05-4b3b-9bc1-399307b134de)
 - handle more errors and exceptions
 
+```py
+class Tab:
+    def __init__(self, Filename, name, text, date):
+        self.Filename = Filename
+        self.name = name
+        self.text = text
+        self.date = date
+    def deleteTab():
+        pass 
+        # delete object, and tab
+```
