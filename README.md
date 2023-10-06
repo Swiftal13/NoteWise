@@ -96,3 +96,5 @@ class Tab:
         pass 
         # delete object, and tab
 ```
+
+NEA starts end of y12, i have to finsih this by midy12
