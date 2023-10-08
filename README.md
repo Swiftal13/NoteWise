@@ -99,3 +99,4 @@ class Tab:
 
 NEA starts end of y12, i have to finsih this by midy12
 class objects should be used more for more maintainable, cleaner code
+ive removed the counter and numbererd tabs to make it simplier for now
