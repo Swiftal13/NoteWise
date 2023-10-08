@@ -2,6 +2,7 @@ import customtkinter as ctk
 from datetime import date
 import os
 import csv
+import atexit
 
 # Colours:
 grey = "#505050"
@@ -18,64 +19,78 @@ NoteFontBold = ("Arabic Transparent", 17, "bold")
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
-# CSV creation
-with open("details.csv", "r") as Dfile:
-    csv_reader = csv.reader(Dfile)
-    ValueList = [line for line in csv_reader]
-    counter = ValueList[0][1]
+
+ActiveSelect = None  # Define ActiveSelect as a global variable
 
 class NoteWise(ctk.CTk):
     def __init__(self):
         super().__init__()
 
         # Window properties
-        self.title("Intellis")
+        self.title("Intelli")
         self.geometry("900x600")
         self.resizable(False, False)
 
+        # Tab structure - 
+        class Tab:
+            def __init__(self, filename, name, text, date):
+                self.filename = filename
+                self.name = name
+                self.text = text
+                self.date = date
+            def deleteTab():
+                pass 
+                # delete object, and tab
+
         Tabs = []
 
+
+
+
+
         def TabCreate():
-            global counter
-            today = date.today()
-            todayStr = date.isoformat(today)
-            name = f"New notetab({str(counter)})"
-            print(name)
-            self.AddTab = ctk.CTkButton(master=self.TabScroll, text=f"{name}", fg_color=darkGrey,
-                                       command=lambda: SelectOverwrite(name), width=202, height=40, corner_radius=0,
+            dateToday = date.isoformat(date.today())
+            filename = "New note().txt"
+            name = "New note"
+            newTab = Tab(filename, name, "", dateToday)
+            self.TabScroll.AddTab = ctk.CTkButton(master=self.TabScroll, text=newTab.name, fg_color=darkGrey,
+                                       command=lambda: ActiveTab(newTab.filename), width=202, height=40, corner_radius=0,
                                        hover_color=grey, border_width=0, border_color="#1c1c1c")
-            self.AddTab.pack(side="top", pady=0.2)
-            Tabs.append(self.AddTab)
-            counter = int(counter) + 1
+            self.TabScroll.AddTab.pack(side="top", pady=0.2)
+            Tabs.append(newTab)
+
             try:
                 NewFile = open(f"{name}.txt", "x")
                 NewFile.close()
-                Files.append(NewFile)
             except:
                 pass
 
-        def SelectOverwrite(tabName):
-            ActiveSelect = tabName
-            self.TextEntry.delete("1.0", "end")
+        def ActiveTab(tabName):
+            global ActiveSelect
+            ActiveSelect = tabName  # Set ActiveSelect to the selected tabName
+
             try:
-                with open(f"{ActiveSelect}.txt", "r") as file:
+                with open(ActiveSelect, "r") as file:
                     NewText = file.read()
                     self.TextEntry.insert("1.0", NewText)
             except FileNotFoundError:
-                print(f"File '{ActiveSelect}.txt' not found")
+                print(f"File '{ActiveSelect}' not found")
 
         def TabDelete():
             global counter
             if bool(Tabs):
-                counter -= 1
                 Tabs[-1].destroy()
                 Tabs.remove(Tabs[-1])
+                filename = (Tabs[-1]).filename
+                os.remove(filename)
 
         def SaveText(text, tabName):
             print(tabName)
-            file = open(f"{tabName}.txt", "w+")
-            file.write(text)
-            file.close()
+            try:
+                with open(f"{tabName}.txt", "w") as file:
+                    file.write(text)
+            except Exception as e:
+                print(f"Error while saving: {e}")
 
         def Info():
             root = ctk.CTkToplevel()
@@ -114,8 +129,14 @@ class NoteWise(ctk.CTk):
                                         fg_color=grey, hover_color=orange, corner_radius=0, width=60, height=30)
         self.SaveButton.place(relx=0.6, rely=0.9)
 
+        # Header bar and label
+        self.HeaderBar = ctk.CTkFrame(self, fg_color = grey, border_color = grey, corner_radius = 0)
+        self.HeaderBar.place(relx = 0.2, rely = 0, relwidth = 1, relheight = 0.05)
+        self.HeaderBar.HeaderLabel = ctk.CTkLabel
+
+
         self.EntryFrame = ctk.CTkFrame(self, fg_color=grey, border_color=lightGrey)
-        self.EntryFrame.place(relx=0.2, rely=0, relwidth=1, relheight=1)
+        self.EntryFrame.place(relx=0.2, rely=0.05, relwidth=1, relheight=0.9)
         self.TextEntry = ctk.CTkTextbox(self.EntryFrame, font=NoteFont, corner_radius=0, fg_color=lightGrey,
                                        border_color=grey, text_color=darkGrey)
         self.TextEntry.place(relx=0, rely=0, relwidth=0.8, relheight=1)
@@ -126,16 +147,13 @@ class NoteWise(ctk.CTk):
                     if file.endswith(".txt"):
                         fileName = file.rstrip(".txt")
                         self.AddTab = ctk.CTkButton(master=self.TabScroll, text=f"{fileName}", fg_color=darkGrey,
-                                                   command=lambda fn=fileName: SelectOverwrite(fn),
+                                                   command=lambda fn=fileName: ActiveTab(fn),
                                                    width=202, height=40, corner_radius=0, hover_color=grey,
                                                    border_width=0, border_color="#1c1c1c")
                         self.AddTab.pack(side="top", pady=0.2)
                         Tabs.append(self.AddTab)
-
         SetupTabs()
 
 if __name__ == "__main__":
     app = NoteWise()
     app.mainloop()
-
-
