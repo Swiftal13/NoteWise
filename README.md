@@ -103,3 +103,4 @@ ive removed the counter and numbererd tabs to make it simplier for now
 instead i shall make feature of naming the tabs
 
 whats the point of adding tabs to a list, but still using tabs and not the objects. Good functional progress
+do i extend my time to 5 for coding
