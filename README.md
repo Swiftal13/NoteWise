@@ -107,3 +107,4 @@ instead i shall make feature of naming the tabs
 
 whats the point of adding tabs to a list, but still using tabs and not the objects. Good functional progress
 friday saturday
+coding from tomoz
