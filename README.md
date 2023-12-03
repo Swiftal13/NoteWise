@@ -110,3 +110,4 @@ friday saturday
 coding from tomoz
 no
 its had
+refactor code, small classes, apparently the creating tabs requires parameters i dont ufcking knwo
