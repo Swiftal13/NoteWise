@@ -106,8 +106,5 @@ ive removed the counter and numbererd tabs to make it simplier for now
 instead i shall make feature of naming the tabs
 
 whats the point of adding tabs to a list, but still using tabs and not the objects. Good functional progress
-friday saturday
-coding from tomoz
-no
-its had
+
 refactor code, small classes, apparently the creating tabs requires parameters i dont ufcking knwo
