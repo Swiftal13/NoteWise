@@ -11,8 +11,8 @@ lightGrey = "#D4D4D2"
 green = "#78f060"
 
 # Font
-NoteFont = ("Arabic Transparent", 15)
-NoteFontBold = ("Arabic Transparent", 17, "bold")
+Font = ("Arabic Transparent", 15)
+FontBold = ("Arabic Transparent", 17, "bold")
 
 # Folderpath for textfiles
 folder_path = "NoteFiles/NoteTab"
@@ -86,7 +86,7 @@ class NoteWise(ctk.CTk):
             root.geometry("400x150")
             root.resizable(False, False)
 
-            Title = ctk.CTkLabel(master=root, text="An AI noting App", font=NoteFontBold)
+            Title = ctk.CTkLabel(master=root, text="An AI noting App", font=FontBold)
             Title.pack(side="top")
             Description = ctk.CTkLabel(master=root, text="This was researched and developed in order to implement AI,\n"
                                                         "specifically NLP (Natural Language Processing) into your notes, \n"
@@ -99,19 +99,19 @@ class NoteWise(ctk.CTk):
         self.TabScroll = ctk.CTkScrollableFrame(master=self.sidebar, corner_radius=0)
         self.TabScroll.place(relx=0.00, rely=0.15, relwidth=1, relheight=0.4)
 
-        self.IconLabel = ctk.CTkLabel(master=self.sidebar, text="NoteWise", font=NoteFontBold)
+        self.IconLabel = ctk.CTkLabel(master=self.sidebar, text="NoteWise", font=FontBold)
         self.IconLabel.pack(side="top", pady=5)
 
-        self.AddTab = ctk.CTkButton(master=self.sidebar, text="+", font=NoteFont, command= lambda: Tab.tabCreate("Note.txt", self.tabList), fg_color=grey,
+        self.AddTab = ctk.CTkButton(master=self.sidebar, text="+", font=Font, command= lambda: Tab.tabCreate("Note.txt", self.tabList), fg_color=grey,
                                     hover_color=orange, corner_radius=0, width=60, height=20)
         self.AddTab.place(relx=0.66, rely=0.07)
-        self.DelTab = ctk.CTkButton(master=self.sidebar, text="Del", font=NoteFont, command=Tab.tabDelete, fg_color=grey,
+        self.DelTab = ctk.CTkButton(master=self.sidebar, text="Del", font=Font, command=Tab.tabDelete, fg_color=grey,
                                     hover_color=orange, corner_radius=0, width=60, height=20)
         self.DelTab.place(relx=0.33, rely=0.07)
-        self.InfoButton = ctk.CTkButton(master=self.sidebar, text="Info", font=NoteFont, command=Info, fg_color=grey,
+        self.InfoButton = ctk.CTkButton(master=self.sidebar, text="Info", font=Font, command=Info, fg_color=grey,
                                        hover_color=orange, corner_radius=0, width=60, height=20)
         self.InfoButton.place(relx=0.00, rely=0.07)
-        self.SaveButton = ctk.CTkButton(master=self.sidebar, text="Save", font=NoteFont,
+        self.SaveButton = ctk.CTkButton(master=self.sidebar, text="Save", font=Font,
                                         command=lambda: SaveText(self.TextEntry.get("0.0", "end"), ActiveSelect),
                                         fg_color=grey, hover_color=orange, corner_radius=0, width=60, height=30)
         self.SaveButton.place(relx=0.6, rely=0.9)
@@ -124,7 +124,7 @@ class NoteWise(ctk.CTk):
 
         self.EntryFrame = ctk.CTkFrame(self, fg_color=grey, border_color=lightGrey)
         self.EntryFrame.place(relx=0.2, rely=0.05, relwidth=1, relheight=0.9)
-        self.TextEntry = ctk.CTkTextbox(self.EntryFrame, font=NoteFont, corner_radius=0, fg_color=lightGrey,
+        self.TextEntry = ctk.CTkTextbox(self.EntryFrame, font=Font, corner_radius=0, fg_color=lightGrey,
                                        border_color=grey, text_color=darkGrey)
         self.TextEntry.place(relx=0, rely=0, relwidth=0.8, relheight=1)
 
