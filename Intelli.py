@@ -24,44 +24,49 @@ ctk.set_default_color_theme("blue")
 ActiveSelect = None  # Define ActiveSelect as a global variable
 
 
-class Tab:
-
-    def __init__(self, Filename, name, text, date):
-        self.Filename = Filename
-        self.name = name
-        self.text = text
-        self.date = date
-
-    def tabCreate(Filename, Tabs):
-        newTab = Tab(Filename, "New note", "", date.isoformat(date.today()))
-        try:
-            with open(newTab.Filename, "x") as NewFile:
-                Tabs.append(newTab)
-                
-
-        except FileExistsError:
-            print("File already exists. Chooese a different name")
-    
-    def tabDelete():
-        del newTab
-        
 
 
 class NoteWise(ctk.CTk):
     def __init__(self):
         super().__init__()
 
+        
+        class Tab(NoteWise):
+
+            def __init__(self, Filename, name, text, date):
+                self.Filename = Filename
+                self.name = name
+                self.text = text
+                self.date = date
+
+            def tabCreate(Filename, Tabs):
+                newTab = Tab(Filename, "New note", "", date.isoformat(date.today()))
+                try:
+                    with open(newTab.Filename, "x") as NewFile:
+                        Tabs.append(newTab)
+                        self.Tab = ctk.CTkButton(master=self.TabScroll, text=newTab.Filename, fg_color=darkGrey,
+                                                   width=202, height=40, corner_radius=0, hover_color=grey,
+                                                   border_width=0, border_color="#1c1c1c", command = lambda: ActiveSelect(newTab.Filename))
+                        self.Tab.pack(side="top", pady=0.2)
+                
+                        
+                except FileExistsError:
+                    print("File already exists. Chooese a different name")
+            
+            def tabDelete():
+                del newTab
+                
+
         # Window properties
         self.title("Intelli")
-        self.attributes("-fullscreen", True)
+        self.geometry("900x500")
         self.resizable(False, False)
-
         self.tabList = []
 
 
         def ActiveTab(tabName):
             global ActiveSelect
-            ActiveSelect = tabName  # Set ActiveSelect to the selected tabName
+            ActiveSelect = f"{tabName}.txt"  # Set ActiveSelect to the selected tabName
 
             try:
                 with open(ActiveSelect, "r") as file:
@@ -133,11 +138,11 @@ class NoteWise(ctk.CTk):
                 for file in files:
                     if file.endswith(".txt"):
                         fileName = file.rstrip(".txt")
-                        self.AddTab = ctk.CTkButton(master=self.TabScroll, text=f"{fileName}", fg_color=darkGrey,
+                        self.Tab = ctk.CTkButton(master=self.TabScroll, text=f"{fileName}", fg_color=darkGrey,
                                                    command=lambda fn=fileName: ActiveTab(fn),
                                                    width=202, height=40, corner_radius=0, hover_color=grey,
                                                    border_width=0, border_color="#1c1c1c")
-                        self.AddTab.pack(side="top", pady=0.2)
+                        self.Tab.pack(side="top", pady=0.2)
         SetupTabs()
 
 if __name__ == "__main__":
