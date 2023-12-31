@@ -107,4 +107,5 @@ instead i shall make feature of naming the tabs
 whats the point of adding tabs to a list, but still using tabs and not the objects. Good functional progress
 
 refactor code, small classes, apparently the creating tabs requires parameters 
+im going to focus on the Machine learning form now on, thats the important part
 
