@@ -21,10 +21,6 @@ ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
 
-ActiveSelect = None  # Define ActiveSelect as a global variable
-
-
-
 
 class NoteWise(ctk.CTk):
     def __init__(self):
@@ -46,7 +42,7 @@ class NoteWise(ctk.CTk):
                         Tabs.append(newTab)
                         self.Tab = ctk.CTkButton(master=self.TabScroll, text=newTab.Filename, fg_color=darkGrey,
                                                    width=202, height=40, corner_radius=0, hover_color=grey,
-                                                   border_width=0, border_color="#1c1c1c", command = lambda: ActiveSelect(newTab.Filename))
+                                                   border_width=0, border_color="#1c1c1c", command = lambda: ActiveTab(newTab.Filename))
                         self.Tab.pack(side="top", pady=0.2)
                 
                         
@@ -64,22 +60,19 @@ class NoteWise(ctk.CTk):
         self.tabList = []
 
 
-        def ActiveTab(tabName):
-            global ActiveSelect
-            ActiveSelect = f"{tabName}.txt"  # Set ActiveSelect to the selected tabName
-
+        def ActiveTab(Filename):  # Set ActiveSelect to the selected tabName
             try:
-                with open(ActiveSelect, "r") as file:
+                with open(Filename, "r") as file:
                     NewText = file.read()
-                    self.TextEntry.insert("1.0", NewText)
+                    self.TextBox.insert("1.0", NewText)
             except FileNotFoundError:
-                print(f"File '{ActiveSelect}' not found")
+                print(f"File '{Filename}' not found")
 
 
-        def SaveText(text, tabName):
-            print(tabName)
+        def SaveText(text, Filename):
+            print(Filename)
             try:
-                with open(f"{tabName}.txt", "w") as file:
+                with open(f"{Filename}.txt", "w") as file:
                     file.write(text)
             except Exception as e:
                 print(f"Error while saving: {e}")
@@ -117,7 +110,7 @@ class NoteWise(ctk.CTk):
                                        hover_color=orange, corner_radius=0, width=60, height=20)
         self.InfoButton.place(relx=0.00, rely=0.07)
         self.SaveButton = ctk.CTkButton(master=self.sidebar, text="Save", font=Font,
-                                        command=lambda: SaveText(self.TextEntry.get("0.0", "end"), ActiveSelect),
+                                        command=lambda: SaveText(self.TextBox.get("0.0", "end"), ActiveSelect),
                                         fg_color=grey, hover_color=orange, corner_radius=0, width=60, height=30)
         self.SaveButton.place(relx=0.6, rely=0.9)
 
@@ -129,9 +122,9 @@ class NoteWise(ctk.CTk):
 
         self.EntryFrame = ctk.CTkFrame(self, fg_color=grey, border_color=lightGrey)
         self.EntryFrame.place(relx=0.2, rely=0.05, relwidth=1, relheight=0.9)
-        self.TextEntry = ctk.CTkTextbox(self.EntryFrame, font=Font, corner_radius=0, fg_color=lightGrey,
+        self.TextBox = ctk.CTkTextbox(self.EntryFrame, font=Font, corner_radius=0, fg_color=lightGrey,
                                        border_color=grey, text_color=darkGrey)
-        self.TextEntry.place(relx=0, rely=0, relwidth=0.8, relheight=1)
+        self.TextBox.place(relx=0, rely=0, relwidth=0.8, relheight=1)
 
         def SetupTabs():
             for dir, folder, files in os.walk(os.getcwd()):
