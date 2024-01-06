@@ -88,7 +88,7 @@ class NoteWise(ctk.CTk):
                 self.tabButton.pack(side="top", pady=0.2) 
                 self.activeTab = Filename   
         except FileExistsError:
-            print("File already exists. Choosee a different name")
+            print("File already exists. Choose a different name")
 
     def ActiveTab(self, Filename):
         try:
@@ -160,4 +160,5 @@ class Tab():
 if __name__ == "__main__":
     app = NoteWise()
     app.mainloop()
+
 
