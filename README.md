@@ -109,4 +109,5 @@ whats the point of adding tabs to a list, but still using tabs and not the objec
  
 im going to focus on the Machine learning form now on, thats the important part
 microsoft turtorial
+research for how tod it
 
