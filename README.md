@@ -105,7 +105,7 @@ instead i shall make feature of naming the tabs
 my code is more structured
 
 whats the point of adding tabs to a list, but still using tabs and not the objects. Good functional progress
-
+lll
  
 im going to focus on the Machine learning form now on, thats the important part
 microsoft turtorial
