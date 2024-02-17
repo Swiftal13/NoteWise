@@ -109,5 +109,5 @@ lll
  
 im going to focus on the Machine learning form now on, thats the important part
 microsoft turtorial
-research for how tod it
+research for how tod itl
 
