@@ -7,7 +7,7 @@ The app strucures tabs in order of date modified
 
 Next thing is to then integarte natural language processing
 It can predict and autofill your sentences., and apuncutauation.
-It only predicts if the text was typed. If there is a part which AI genereated, it does not predict any further till the person writes again ontop of it.
+It only predicts if the text was typed. If there is a part which AI generea**ted, it does not predict any further till the person writes again ontop of it.
 ![image](https://github.com/Swiftal13/NoteWise/assets/76588047/2d8c05ca-82a2-4115-89eb-4ed370268b2d)
 
 add widgets to create as new objects for each new note
