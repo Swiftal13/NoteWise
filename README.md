@@ -1,5 +1,5 @@
 - **App to type up notes. On a tab**
-You can open new tabs to write on.
+You can open new tabs to write on.i
 When you close it and open it again, the tabs are all still there. You can interchange between each tab.
 Scroll through tabs. Anymore is saved in a folder.
 The app strucures tabs in order of date modified
